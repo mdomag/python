@@ -10,13 +10,12 @@ print(f"zasada: {rule} dlugosc ciagu: {sequence_length } liczba krokow: {steps}"
 patterns = ["***", "**_", "*_*", "*__", "_**", "_*_", "__*", "___"]
 sequence = list("".join(random.choice('*_') for i in range(sequence_length+2)))
 
-#sequence=list("_*_*_*_**__**__*_*_**_**__*__**_")
+#sequence=list("")
 #sequence_length  = len(sequence)-2
 
 sequence[0], sequence[-1] = sequence[-2], sequence[1] #uproszczone zapetlenie sekwencji
 
-print(f"{'STEPS'.center(sequence_length*5, '_')}")
-print(sequence[1:sequence_length +1])
+print(*sequence[1: sequence_length], sep='')
 
 for i in range(steps):
     temp = '_'
@@ -27,4 +26,4 @@ for i in range(steps):
         temp = '*' if cur else '_'
     sequence[sequence_length] = temp
     sequence[0], sequence[-1] = sequence[-2], sequence[1]
-    print(sequence[1:sequence_length +1])
+    print(*sequence[1: sequence_length], sep='')
