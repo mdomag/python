@@ -1,0 +1,5 @@
+plt.figure(figsize=(5, 8))
+plt.axis('off')
+plt.title("Barnsley fern")
+plt.scatter(x, y, s=0.03, c='green')
+plt.show()
