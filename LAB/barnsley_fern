@@ -12,9 +12,9 @@ def f4(x, y):
 x = [0]
 y = [0]
 for i in range(100000):
-    res = random.choices([f1(x[i], y[i]), f2(x[i], y[i]), f3(x[i], y[i]), f4(x[i], y[i])], [0.85, 0.07, 0.07, 0.01])[0]
-    x.append(res[0])
-    y.append(res[1])
+    result = random.choices([f1(x[i], y[i]), f2(x[i], y[i]), f3(x[i], y[i]), f4(x[i], y[i])], [0.85, 0.07, 0.07, 0.01])[0]
+    x.append(result[0])
+    y.append(result[1])
 
 plt.figure(figsize=(5, 8))
 plt.axis('off')
